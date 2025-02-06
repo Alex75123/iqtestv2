@@ -517,7 +517,7 @@ function handlePurchaseClick() {
     localStorage.setItem('returnToResults', 'true');
     
     // Redirect to Stripe payment page
-    window.location.href = 'https://buy.stripe.com/test_3cs4io06AdgO17abII';
+    window.location.href = 'https://buy.stripe.com/4gwdUi12J9D6eqc9AB';
 }
 
 // Keep the rest of your DOMContentLoaded event listener as is
