@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your IQ Test Results</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="background-pattern"></div>
+    <div class="container results-page">
+        <div class="results-header">
+            <h1>Your IQ Test Results</h1>
+            <div class="score-badge">
+                <div class="score-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <span class="score-label">Your IQ Score</span>
+                <span id="final-score" class="score-number">--</span>
+                <div class="score-decoration"></div>
+            </div>
+            <div class="certificate-download">
+                <button id="download-certificate" class="certificate-button">
+                    <i class="fas fa-certificate"></i>
+                    Download Your IQ Certificate
+                </button>
+            </div>
+        </div>
+
+        <div class="section-results">
+            <div class="section-card number-series">
+                <h2><i class="fas fa-chart-line"></i> Number Series</h2>
+                <div class="score-display">
+                    <span id="number-series-score">--</span>/15 correct
+                </div>
+                <div class="section-description">
+                    <h3>What This Measures:</h3>
+                    <p>Number Series questions assess your ability to recognize patterns and make logical predictions. This skill is crucial for:</p>
+                    <ul>
+                        <li>Mathematical reasoning</li>
+                        <li>Pattern recognition</li>
+                        <li>Sequential thinking</li>
+                        <li>Predictive analysis</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card missing-numbers">
+                <h2><i class="fas fa-puzzle-piece"></i> Missing Numbers</h2>
+                <div class="score-display">
+                    <span id="missing-numbers-score">--</span>/10 correct
+                </div>
+                <div class="section-description">
+                    <h3>What This Measures:</h3>
+                    <p>Missing Numbers questions evaluate your numerical reasoning and mathematical intuition. This ability relates to:</p>
+                    <ul>
+                        <li>Analytical thinking</li>
+                        <li>Problem-solving skills</li>
+                        <li>Mathematical comprehension</li>
+                        <li>Logical deduction</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card logic-problems">
+                <h2><i class="fas fa-brain"></i> Logic Problems</h2>
+                <div class="score-display">
+                    <span id="logic-problems-score">--</span>/15 correct
+                </div>
+                <div class="section-description">
+                    <h3>What This Measures:</h3>
+                    <p>Logic Problems assess your abstract reasoning and problem-solving abilities. These skills are essential for:</p>
+                    <ul>
+                        <li>Critical thinking</li>
+                        <li>Complex problem solving</li>
+                        <li>Abstract reasoning</li>
+                        <li>Decision making</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="detailed-report">
+            <h2>Detailed Analysis Report</h2>
+            
+            <div class="percentile-ranking">
+                <h3>Your Percentile Ranking</h3>
+                <div class="percentile-bar">
+                    <div class="percentile-indicator" id="percentile-marker"></div>
+                    <div class="percentile-labels">
+                        <span>0%</span>
+                        <span>25%</span>
+                        <span>50%</span>
+                        <span>75%</span>
+                        <span>100%</span>
+                    </div>
+                </div>
+                <p class="percentile-explanation" id="percentile-text"></p>
+            </div>
+
+            <div class="cognitive-strengths">
+                <h3>Cognitive Strengths Profile</h3>
+                <div class="strengths-grid">
+                    <div class="strength-item">
+                        <h4>Pattern Recognition</h4>
+                        <div class="strength-bar">
+                            <div id="pattern-strength" class="strength-level"></div>
+                        </div>
+                    </div>
+                    <div class="strength-item">
+                        <h4>Numerical Reasoning</h4>
+                        <div class="strength-bar">
+                            <div id="numerical-strength" class="strength-level"></div>
+                        </div>
+                    </div>
+                    <div class="strength-item">
+                        <h4>Logical Analysis</h4>
+                        <div class="strength-bar">
+                            <div id="logical-strength" class="strength-level"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="career-recommendations">
+                <h3>Career Path Recommendations</h3>
+                <div class="career-paths" id="career-suggestions">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="development-suggestions">
+                <h3>Development Suggestions</h3>
+                <div class="suggestions-list" id="development-tips">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="performance-summary">
+            <h2>Overall Performance Summary</h2>
+            <p id="performance-text"></p>
+        </div>
+
+        <div class="review-section">
+            <h2>Share Your Experience</h2>
+            <div class="review-form">
+                <div class="name-input">
+                    <label for="reviewer-name">Full Name</label>
+                    <input type="text" id="reviewer-name" placeholder="Enter your full name" />
+                </div>
+                <div class="rating-input">
+                    <label>Rate your experience</label>
+                    <div class="stars">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                    </div>
+                </div>
+                <div class="review-input">
+                    <label for="review-text">Your Review</label>
+                    <textarea id="review-text" placeholder="Share your thoughts about the IQ test experience..."></textarea>
+                </div>
+                <button id="submit-review" class="review-button">
+                    <i class="fas fa-paper-plane"></i>
+                    Submit Review
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="results.js"></script>
+</body>
+</html> 
